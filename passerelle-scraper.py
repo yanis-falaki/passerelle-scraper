@@ -12,7 +12,7 @@ def Start():
 
   for row in cursor:
     url = row[2]
-    filename = f'{row[1]}.jpg'
+    filename = f'{row[1]}_{row[0]}.jpg'
     directory = f'./images/{row[0]}/'
     response = requests.get(url)
 

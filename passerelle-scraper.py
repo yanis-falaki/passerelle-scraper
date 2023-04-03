@@ -8,7 +8,7 @@ def Start():
       raise ValueError("DB_PATH environment variable not set")
   
   conn = sqlite3.connect(db_path)
-  cursor = conn.execute('SELECT mls_number, order_number, url FROM PHOTOS')
+  cursor = conn.execute('SELECT NO_INSCRIPTION, SEQ, PhotoURL FROM PHOTOS')
 
   for row in cursor:
     url = row[2]
